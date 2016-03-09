@@ -1,0 +1,16 @@
+/*
+ * La cabecera de la pagina inicio.html
+ */
+.cabecera h1{
+    color: black;
+    text-align: center;
+    font-size: 30pt;
+}
+
+/*
+ * El mapa de la pagina inicio.html
+ */
+#mapa {
+   height: 50%;
+   width: 100%;
+}
