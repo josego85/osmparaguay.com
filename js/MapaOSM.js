@@ -10,8 +10,8 @@ function cargarMapa(){
 	v_mapa =  L.map('mapa').setView([v_latitud, v_longitud], v_zoom);
 
 	// Humanitarian Style.
-	L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 18,
-		attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a> Tiles \u00a9 HOT'
+		attribution: 'Data \u00a9 <a href="https://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a> Tiles \u00a9 HOT'
 	}).addTo(v_mapa);
 }
