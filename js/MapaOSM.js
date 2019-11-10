@@ -1,17 +1,19 @@
-// Variables y Objetos globales.
-var v_mapa = null;
+// Variables y objetos globales.
+var mapa = null;
 
 function cargarMapa(){
 	// Asuncion - Paraguay.
-	var v_longitud = -56.8909129;
-	var v_latitud = -24.0061407;
-	var v_zoom = 6;
+	var longitud = -56.8909129;
+	var latitud = -24.0061407;
+	var zoom = 6;
 
-	v_mapa =  L.map('mapa').setView([v_latitud, v_longitud], v_zoom);
+	mapa =  L.map('mapa').setView([latitud, longitud], zoom);
 
-	// Humanitarian Style.
+	mapa.scrollWheelZoom.disable();
+
+	// Humanitarian style.
 	L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 18,
 		attribution: 'Data \u00a9 <a href="https://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a> Tiles \u00a9 HOT'
-	}).addTo(v_mapa);
+	}).addTo(mapa);
 }
