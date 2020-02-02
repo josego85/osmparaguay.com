@@ -1,14 +1,18 @@
 <html>
 <head>
-    <title>OSM Paraguay</title><meta charset="utf-8">
-    <link rel="SHORTCUT ICON" href="recursos/img/favicon.ico">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link rel="SHORTCUT ICON" href="recursos/img/favicon.ico">
+
+    <title>OSM Paraguay</title>
 
     <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="libs/js/Leaflet/leaflet.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="screen" />
-    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- JS -->
     <script src="libs/js/JQuery/datetimepicker-master/jquery.js" type="text/javascript" charset="utf-8"></script>
@@ -26,39 +30,83 @@
     </script>
 </head>
 <body onLoad="cargarMapa()">
+
+    <!--/ Nav Star /-->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-brand" href="/">OSM<span class="color-b">Paraguay</span></a>
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mapa">Mapa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#links">Links</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
     <div class="container cabecera">
         <br>
         <center>
-            <img src="recursos/img/OSMParaguay.png" width="85px" height="85px" alt="OSM Paraguay" title="OSM Paraguay">
+            <h2>Mapa de Paraguay</h2>
+            <!-- <img src="recursos/img/OSMParaguay.png" width="85px" height="85px" alt="OSM Paraguay" title="OSM Paraguay"> -->
         </center>
-        <h1>OSM Paraguay</h1>
     </div>
 
     <div class="container">
         <div id="mapa">
         </div>
-	<br/>
+	      <br/>
         <br/>
-        Eventos:
-        <ul>
-                <li><a href="https://proyectosbeta.net/2019/11/pre-evento-state-of-the-map-latam-mapeo-territorial-y-comunitario-12-noviembre/" target="_blank">Pre-evento State of the Map Latam - Mapeo territorial y comunitario – 12 noviembre</a></li>
-            <li><a href="https://2019.osmlatam.org/" target="_blank">OSM SOTM Latam Paraguay 2019 - 14, 15 y 16 de noviembre</a></li>
-        </ul>
+        <div id="links">
+            Eventos:
+            <ul>
+                    <li><a href="https://proyectosbeta.net/2019/11/pre-evento-state-of-the-map-latam-mapeo-territorial-y-comunitario-12-noviembre/" target="_blank">Pre-evento State of the Map Latam - Mapeo territorial y comunitario – 12 noviembre</a></li>
+                <li><a href="https://2019.osmlatam.org/" target="_blank">OSM SOTM Latam Paraguay 2019 - 14, 15 y 16 de noviembre</a></li>
+            </ul>
 
-        Proyectos:
-        <ul>
-            <li><a href="https://chaco.osmparaguay.org/" target="_blank">Chaco Ra'anga</a></li>
-        </ul>
+            Proyectos:
+            <ul>
+                <li><a href="https://chaco.osmparaguay.org/" target="_blank">Chaco Ra'anga</a></li>
+            </ul>
 
-        Informaci&oacute;n:
-        <ul>
-            <li><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Paraguay" target="_blank">Wiki Paraguay</a></li>
-            <li><a href="https://www.facebook.com/osmparaguay" target="_blank">OSM Paraguay en Facebook</a></li>
-            <li><a href="https://twitter.com/OpenStreetMapPy" target="_blank">Twitter (@OpenStreetMapPy)</a></li>
-            <li><a href="https://t.me/osm_py" target="_blank">OSM Paraguay en Telegram</a></li>
-            <li><a href="https://t.me/osm_chaco_py" target="_blank">OSM Chaco Paraguay en Telegram</a></li>
-            <li><a href="https://lists.openstreetmap.org/listinfo/talk-py" target="_blank">Mail List</a></li>
-        </ul>
+            Informaci&oacute;n:
+            <ul>
+                <li><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Paraguay" target="_blank">Wiki Paraguay</a></li>
+                <li><a href="https://www.facebook.com/osmparaguay" target="_blank">OSM Paraguay en Facebook</a></li>
+                <li><a href="https://twitter.com/OpenStreetMapPy" target="_blank">Twitter (@OpenStreetMapPy)</a></li>
+                <li><a href="https://t.me/osm_py" target="_blank">OSM Paraguay en Telegram</a></li>
+                <li><a href="https://t.me/osm_chaco_py" target="_blank">OSM Chaco Paraguay en Telegram</a></li>
+                <li><a href="https://lists.openstreetmap.org/listinfo/talk-py" target="_blank">Mail List</a></li>
+            </ul>
+        </div>
     </div>
+
+    <!--/ Footer Begin /-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright-footer">
+              <p class="copyright color-text-a">
+                &copy; Copyright
+                <span class="color-a">OSM Paraguay</span> All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/ Footer End /-->
 </body>
 </html>
